@@ -20,13 +20,7 @@ const HomePage: NextPage = () => {
 
         <Wrap justify="center" spacing={4}>
           <WrapItem>
-            <Button
-              as="a"
-              bgColor={siteConfig.themeColor}
-              href="https://doc.seongland.com"
-              leftIcon={<Icon as={FaCode} />}
-              target="_blank"
-            >
+            <Button as="a" bgColor={siteConfig.themeColor} href="espinaj.ir" leftIcon={<Icon as={FaCode} />} target="_blank">
               {' '}
               سجاد پا طلایی، امید تیم مایی
             </Button>
