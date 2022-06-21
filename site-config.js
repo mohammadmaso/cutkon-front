@@ -7,15 +7,15 @@ const description = descriptionMd
   .trim()
 
 module.exports = {
-  title: 'Seongland',
+  title: 'Cut kon',
   descriptionMd,
   description,
-  url: 'https://www.seongland.com',
-  twitterUsername: '@SeonglaeC',
-  email: 'seongle3737@gmail.com',
+  url: 'https://cutkon.com',
+  twitterUsername: '@Cutkon',
+  email: 'hi@cutkon.ir',
   socials: {
-    GitHub: 'https://github.com/seongland/seongland-ing',
-    Twitter: 'https://twitter.com/SeonglaeC',
+    GitHub: 'https://github.com/',
+    Twitter: 'https://twitter.com/Cutkon',
   },
   bgColor: '#1A202C',
   themeColor: '#46c0aE',
