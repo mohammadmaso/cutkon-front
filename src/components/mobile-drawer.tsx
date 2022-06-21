@@ -40,7 +40,7 @@ export const MobileDrawer: React.FC = () => {
         />
       </Box>
 
-      <Drawer finalFocusRef={btnRef} isOpen={isOpen} onClose={onClose} placement="right">
+      <Drawer finalFocusRef={btnRef} isOpen={isOpen} onClose={onClose} placement="left">
         <DrawerOverlay>
           <DrawerContent>
             <DrawerHeader p={8}>

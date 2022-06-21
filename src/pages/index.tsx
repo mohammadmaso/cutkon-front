@@ -18,20 +18,7 @@ const HomePage: NextPage = () => {
           {siteConfig.description}
         </Heading>
 
-        <Wrap justify="center" spacing={4}>
-          <WrapItem>
-            <Button as="a" bgColor={siteConfig.themeColor} href="espinaj.ir" leftIcon={<Icon as={FaCode} />} target="_blank">
-              {' '}
-              سجاد پا طلایی، امید تیم مایی
-            </Button>
-          </WrapItem>
-
-          <WrapItem>
-            <Button as="a" href={siteConfig.socials.GitHub} leftIcon={<Icon as={FaGithub} />}>
-              View source on GitHub
-            </Button>
-          </WrapItem>
-        </Wrap>
+        <Wrap justify="center" spacing={4}></Wrap>
       </Stack>
     </>
   )

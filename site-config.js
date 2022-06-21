@@ -1,4 +1,4 @@
-const descriptionMd = `Cut kon `
+const descriptionMd = `سامانه‌ی ثبت سفارش`
 
 const description = descriptionMd
   .replace(/\[([^\]]+)\](\([^)]+\)|\[[^\]]+\])/g, '$1')
@@ -7,16 +7,17 @@ const description = descriptionMd
   .trim()
 
 module.exports = {
-  title: 'Cut kon',
+  title: 'کات‌کن',
   descriptionMd,
   description,
   url: 'https://cutkon.com',
   twitterUsername: '@Cutkon',
-  email: 'hi@cutkon.ir',
+  email: 'hi@cutkon.com',
   socials: {
-    GitHub: 'https://github.com/',
-    Twitter: 'https://twitter.com/Cutkon',
+    GitIHub: 'https://github.com/',
+    Twitter: 'https://twitter.com/Cutkon.ir',
+    Instagram : "https://instagram.com/cutkon.ir"
   },
   bgColor: '#1A202C',
-  themeColor: '#46c0aE',
+  themeColor: '#00baba',
 }

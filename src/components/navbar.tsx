@@ -12,7 +12,7 @@ export const Navbar: React.FC = () => {
   const socials = useSocials()
 
   return (
-    <HStack as="nav" fontSize="md" p={4} spacing={0}>
+    <HStack as="nav" fontSize="md" p={4} spacing={0} justifyContent="space-between">
       <NextLink href="/">
         <Link fontWeight="bold" href="/" p={4} variant="link">
           {siteConfig.title}

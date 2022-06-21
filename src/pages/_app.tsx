@@ -13,6 +13,8 @@ import { Footer } from '@/components/footer'
 import { theme } from '@/theme'
 import siteConfig from '~/site-config'
 
+import Fonts from '../font/Font'
+
 import type { AppProps } from '@/types/next'
 
 const MobileDrawer = dynamic(() => import('@/components/mobile-drawer').then(C => C.MobileDrawer))
@@ -65,12 +67,16 @@ function App(props: AppProps) {
 
       <ChakraProvider resetCSS theme={theme}>
         {Component.disableLayout ? (
-          <Component {...pageProps} />
+          <>
+            <Fonts />
+            <Component {...pageProps} />
+          </>
         ) : (
           <>
             <Stack justify="space-between" minH="100vh" spacing={0}>
-              <Navbar />
-              <Box as="main">
+              {/* <Navbar /> */}
+              <Box as="main" mt={'2rem'}>
+                <Fonts />
                 <Component {...pageProps} />
               </Box>
               <Footer />
