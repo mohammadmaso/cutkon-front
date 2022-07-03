@@ -14,7 +14,7 @@ interface SnippetProps {
 export const Snippet: React.FC<SnippetProps> = ({ code, language }) => {
   return (
     <Box>
-      <Highlight code={code} language={language} Prism={Prism} theme={theme}>
+      {/* <Highlight code={code} language={language} Prism={Prism} theme={theme}>
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
           <Box
             as="pre"
@@ -34,7 +34,7 @@ export const Snippet: React.FC<SnippetProps> = ({ code, language }) => {
             ))}
           </Box>
         )}
-      </Highlight>
+      </Highlight> */}
 
       <Box color="gray.500" fontSize="sm" textAlign="right" pr={2}>
         {language} snippet
