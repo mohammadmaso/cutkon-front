@@ -1,4 +1,4 @@
-import { theme as defaultTheme, extendTheme } from '@chakra-ui/react'
+import { theme as defaultTheme, extendTheme, withDefaultColorScheme } from '@chakra-ui/react'
 import { mode } from '@chakra-ui/theme-tools'
 
 import siteConfig from '~/site-config'
@@ -19,7 +19,17 @@ const fonts = {
 
 }
 const direction = "rtl"
-export const theme = extendTheme({
+export const theme = extendTheme(
+  // withDefaultColorScheme({
+  //   colorScheme: 'red',
+  //   components: ['Button', 'Badge'],
+  // }),
+  
+  withDefaultColorScheme({
+    colorScheme: 'blue',
+    components: ['Button'],
+  }),
+  {
   components: {
     Link: {
       variants: {
@@ -28,6 +38,20 @@ export const theme = extendTheme({
         }),
       },
     },
+  },
+  colors: {
+    "blue": {
+      "50": "#E5FFFF",
+      "100": "#B8FFFF",
+      "200": "#00Baba",
+      "300": "#00Baba",
+      "400": "#00Baba",
+      "500": "#00Baba",
+      "600": "#00CCCC",
+      "700": "#009999",
+      "800": "#006666",
+      "900": "#003333"
+    }
   },
   fonts,
   config

@@ -1,4 +1,4 @@
-const descriptionMd = `سامانه‌ی ثبت سفارش`
+const descriptionMd = `سامانه‌ی ثبت سفارش آنلاین`
 
 const description = descriptionMd
   .replace(/\[([^\]]+)\](\([^)]+\)|\[[^\]]+\])/g, '$1')
@@ -12,12 +12,13 @@ module.exports = {
   description,
   url: 'https://cutkon.com',
   twitterUsername: '@Cutkon',
-  email: 'hi@cutkon.com',
+  email: 'info@cutkon.com',
   socials: {
-    GitIHub: 'https://github.com/',
+    // GitIHub: 'https://github.com/',
     Twitter: 'https://twitter.com/Cutkon.ir',
     Instagram : "https://instagram.com/cutkon.ir"
   },
   bgColor: '#1A202C',
   themeColor: '#00baba',
+  version : "۰.۱۸",
 }

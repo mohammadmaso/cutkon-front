@@ -7,6 +7,7 @@ import Head from 'next/head'
 import NProgress from 'nprogress'
 import Router from 'next/router'
 import dynamic from 'next/dynamic'
+import { RtlProvider } from '@/components/rtl-provider'
 
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
@@ -67,12 +68,12 @@ function App(props: AppProps) {
 
       <ChakraProvider resetCSS theme={theme}>
         {Component.disableLayout ? (
-          <>
+          <RtlProvider>
             <Fonts />
             <Component {...pageProps} />
-          </>
+          </RtlProvider>
         ) : (
-          <>
+          <RtlProvider>
             <Stack justify="space-between" minH="100vh" spacing={0}>
               {/* <Navbar /> */}
               <Box as="main" mt={'2rem'}>
@@ -83,7 +84,7 @@ function App(props: AppProps) {
             </Stack>
 
             <MobileDrawer />
-          </>
+          </RtlProvider>
         )}
       </ChakraProvider>
     </>

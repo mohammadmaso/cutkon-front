@@ -12,8 +12,14 @@ export default class Document extends NextDocument {
 
   render() {
     return (
-      <Html lang="en">
+      <Html dir="rtl" lang="fa">
         <Head>
+          {/* <script
+            type="text/javascript"
+            dangerouslySetInnerHTML={{
+              __html: `!function(){function t(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,localStorage.getItem("rayToken")?t.src="https://app.raychat.io/scripts/js/"+o+"?rid="+localStorage.getItem("rayToken")+"&href="+window.location.href:t.src="https://app.raychat.io/scripts/js/"+o+"?href="+window.location.href;var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}var e=document,a=window,o="e472d5ce-e45b-4fe5-bf03-8eceb911906f";"complete"==e.readyState?t():a.attachEvent?a.attachEvent("onload",t):a.addEventListener("load",t,!1)}();`,
+            }}
+          /> */}
           <meta charSet="UTF-8" />
           <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
           <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
@@ -44,6 +50,19 @@ export default class Document extends NextDocument {
           <link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png" />
 
           {/* <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" /> */}
+          {/* <script
+            type="text/javascript"
+            dangerouslySetInnerHTML={{
+              __html: ` (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:2601458,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`,
+            }}
+          /> */}
         </Head>
 
         <body>

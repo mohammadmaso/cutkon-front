@@ -2,16 +2,20 @@ import * as React from 'react'
 
 import {
   Box,
+  Divider,
   Drawer,
   DrawerBody,
   DrawerContent,
   DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
+  HStack,
+  VStack,
   Icon,
   IconButton,
   Link,
   Stack,
+  Text,
   useDisclosure,
 } from '@chakra-ui/react'
 import { FaBars, FaTimes } from 'react-icons/fa'
@@ -19,6 +23,7 @@ import { FaBars, FaTimes } from 'react-icons/fa'
 import NextLink from 'next/link'
 import { useSocials } from '@/hooks/app'
 import siteConfig from '~/site-config'
+import TextLogo from './logos/TextLogo'
 
 export const MobileDrawer: React.FC = () => {
   const { isOpen, onClose, onToggle } = useDisclosure()
@@ -42,28 +47,33 @@ export const MobileDrawer: React.FC = () => {
 
       <Drawer finalFocusRef={btnRef} isOpen={isOpen} onClose={onClose} placement="left">
         <DrawerOverlay>
-          <DrawerContent>
+          <DrawerContent justifyContent={'space-between'}>
             <DrawerHeader p={8}>
               <NextLink href="/">
-                <Link href="/" onClick={onClose} variant="link">
+                {/* <Link href="/" onClick={onClose} variant="link">
                   {siteConfig.title}
-                </Link>
+                </Link> */}
+                <TextLogo height={30} width={150} />
               </NextLink>
+              <Divider pt="3" />
             </DrawerHeader>
+            <DrawerBody></DrawerBody>
 
             <DrawerFooter justifyContent="flex-start" px={4} py={8}>
-              {socials.map(([href, SocialIcon]) => (
-                <IconButton
-                  as="a"
-                  aria-label={href}
-                  color="currentColor"
-                  href={href}
-                  icon={<Icon as={SocialIcon} boxSize={6} />}
-                  key={href}
-                  size="lg"
-                  variant="link"
-                />
-              ))}
+              <HStack spacing={0}>
+                {socials.map(([href, SocialIcon]) => (
+                  <IconButton
+                    as="a"
+                    aria-label={href}
+                    color="currentColor"
+                    href={href}
+                    icon={<Icon as={SocialIcon} boxSize={5} />}
+                    key={href}
+                    variant="link"
+                  />
+                ))}
+                <Text size="sm">نسخه‌ {siteConfig.version}</Text>
+              </HStack>
             </DrawerFooter>
           </DrawerContent>
         </DrawerOverlay>
