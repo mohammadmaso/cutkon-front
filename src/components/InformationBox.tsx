@@ -72,7 +72,7 @@ function InformationBox(props: Props) {
           </Wrap>
         </Stack>
       </Box>
-      <Button isFullWidth leftIcon={<ArrowForwardIcon />} onClick={() => {}}>
+      <Button width="full" leftIcon={<ArrowForwardIcon />} onClick={() => {}}>
         ثبت سفارش
       </Button>
     </>

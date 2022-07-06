@@ -14,8 +14,8 @@ const config = {
 
 const fonts = {
     heading: "peyda",
-    body: "IranyekanWeb",
-    p: "IranyekanWeb"
+    body: "iranyekan",
+    p: "iranyekan"
 
 }
 const direction = "rtl"
