@@ -1,4 +1,5 @@
 module.exports = {
+  swcMinify: true,
   // https://nextjs.org/docs/api-reference/next.config.js/headers
   async headers() {
     return [

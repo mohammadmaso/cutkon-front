@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://cutkon.com
+Host: https://app.cutkon.com
 
 # Sitemaps
-Sitemap: https://cutkon.com/sitemap.xml
+Sitemap: https://app.cutkon.com/sitemap.xml

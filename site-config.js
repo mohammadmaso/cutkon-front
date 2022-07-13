@@ -10,7 +10,7 @@ module.exports = {
   title: 'کات‌کن | داشبورد',
   descriptionMd,
   description,
-  url: 'https://cutkon.com',
+  url: 'https://app.cutkon.com',
   twitterUsername: '@Cutkon',
   email: 'info@cutkon.com',
   socials: {
