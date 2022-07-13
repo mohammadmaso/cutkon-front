@@ -7,7 +7,7 @@ const description = descriptionMd
   .trim()
 
 module.exports = {
-  title: 'کات‌کن',
+  title: 'کات‌کن | داشبورد',
   descriptionMd,
   description,
   url: 'https://cutkon.com',

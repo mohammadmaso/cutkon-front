@@ -7,28 +7,28 @@ export const Footer: React.FC = () => {
   const socials = useSocials()
 
   return (
-    <Stack as="footer" pb={5} pt={8} spacing={5} alignItems="flex-end">
-      <Box px={8}>
-        <Divider />
-      </Box>
-      <Flex alignItems="flex-end" flexDir="row" justifyContent="space-between" px={5}>
-        <VStack spacing={0} alignItems="flex-end">
-          <HStack spacing={1}>
-            {socials.map(([href, SocialIcon]) => (
-              <Link href={href} isExternal key={href}>
-                <Icon as={SocialIcon} boxSize={4} />
-              </Link>
-            ))}
-          </HStack>
-          <Text fontSize={'smaller'}>
-            🌱 طراحی شده توسط{' '}
-            <Link href={'https://espinaj.ir'} isExternal key={'https://espinaj.ir'}>
-              اسپیناج
-            </Link>{' '}
-            | © {year}
-          </Text>
-        </VStack>
-      </Flex>
-    </Stack>
+    <>
+      <Divider pt="3" />
+      <Stack as="footer" pb={3} pt="3" spacing={5} alignItems="center">
+        <Flex alignItems="center" flexDir="row" justifyContent="space-between" px={5}>
+          <VStack spacing={0} alignItems="center">
+            <HStack spacing={1}>
+              {socials.map(([href, SocialIcon]) => (
+                <Link opacity={'0.5'} href={href} isExternal key={href}>
+                  <Icon as={SocialIcon} boxSize={4} />
+                </Link>
+              ))}
+            </HStack>
+            <Text opacity={'0.6'} fontSize={'xs'}>
+              🌱 طراحی شده توسط{' '}
+              <Link href={'https://espinaj.ir'} isExternal key={'https://espinaj.ir'}>
+                اسپیناج
+              </Link>{' '}
+              | © {year}
+            </Text>
+          </VStack>
+        </Flex>
+      </Stack>
+    </>
   )
 }

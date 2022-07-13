@@ -3,6 +3,7 @@ html {
 }
 
 body {
+  /* background-color: aqua; */
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -13,7 +14,7 @@ body {
 }
 
 #nprogress .bar {
-  background: rgb(74, 76, 83);
+  background: #00Baba;
 
   position: fixed;
   z-index: 1031;
@@ -30,7 +31,7 @@ body {
   right: 0px;
   width: 100px;
   height: 100%;
-  box-shadow: 0 0 10px rgb(74, 76, 83), 0 0 5px rgb(74, 76, 83);
+  box-shadow: 0 0 10px #00Baba, 0 0 5px #00Baba;
   opacity: 1;
 
   -webkit-transform: rotate(3deg) translate(0px, -4px);
@@ -45,4 +46,13 @@ body {
 
 .nprogress-custom-parent #nprogress .bar {
   position: absolute;
+}
+
+.opt-input > * {
+  display: flex !important;
+  flex-direction: row-reverse !important;
+}
+
+.opt-input> *> *:first-child {
+  margin-right: 8px !important;
 }

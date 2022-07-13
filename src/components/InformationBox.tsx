@@ -18,11 +18,18 @@ import React from 'react'
 import { GoInfo, GoLocation } from 'react-icons/go'
 import { BiUser, BiPhone, BiPin } from 'react-icons/bi'
 
-interface Props {
-  selected: boolean
+export type informationType = {
+  firstName: string
+  lastName: string
+  address: string
 }
 
-function InformationBox(props: Props) {
+type Props = {
+  onInputChange: (info: informationType) => void
+}
+
+function InformationBox({ onInputChange }: Props) {
+  const info = {} as informationType
   return (
     <>
       <Box
@@ -31,8 +38,8 @@ function InformationBox(props: Props) {
         borderWidth="thin"
         minH="7rem"
         p="3"
-        _hover={{ transform: 'scale(1.15,1.15)', bgColor: 'gray.50' }}
-        transition="all 0.4s ease"
+        // _hover={{ transform: 'scale(1.15,1.15)', bgColor: 'gray.50' }}
+        // transition="all 0.4s ease"
       >
         <Stack spacing="0.5">
           <Flex justify="space-between" align="center">
@@ -56,25 +63,42 @@ function InformationBox(props: Props) {
 
             <Stack width={'full'}>
               <InputGroup>
-                <InputRightAddon pointerEvents="none" children={<Icon as={BiPhone} color="gray.300" />} />
-                <Input fontSize={'xs'} type="tel" placeholder="شماره‌ی تماس" />
+                <InputRightAddon pointerEvents="none" children={<Icon as={BiUser} color="gray.300" />} />
+                <Input
+                  onChange={e => {
+                    ;(info.firstName = e.target.value), onInputChange(info)
+                  }}
+                  fontSize={'xs'}
+                  placeholder="نام"
+                  type={'text'}
+                />
               </InputGroup>
-
               <InputGroup>
                 <InputRightAddon pointerEvents="none" children={<Icon as={BiUser} color="gray.300" />} />
-                <Input fontSize={'xs'} placeholder="نام و نام خانوادگی" type={'text'} />
+                <Input
+                  onChange={e => {
+                    ;(info.lastName = e.target.value), onInputChange(info)
+                  }}
+                  fontSize={'xs'}
+                  placeholder="نام خانوادگی"
+                  type={'text'}
+                />
               </InputGroup>
               <InputGroup>
                 <InputRightAddon pointerEvents="none" children={<Icon as={GoLocation} color="gray.300" />} />
-                <Input fontSize={'xs'} placeholder="آدرس پستی" type={'text'} />
+                <Input
+                  onChange={e => {
+                    ;(info.address = e.target.value), onInputChange(info)
+                  }}
+                  fontSize={'xs'}
+                  placeholder="آدرس پستی"
+                  type={'text'}
+                />
               </InputGroup>
             </Stack>
           </Wrap>
         </Stack>
       </Box>
-      <Button width="full" leftIcon={<ArrowForwardIcon />} onClick={() => {}}>
-        ثبت سفارش
-      </Button>
     </>
   )
 }

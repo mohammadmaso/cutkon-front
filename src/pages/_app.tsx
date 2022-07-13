@@ -1,5 +1,3 @@
-import '@/stylesheets/html.css'
-
 import * as React from 'react'
 import { Box, ChakraProvider, Stack } from '@chakra-ui/react'
 import { DefaultSeo, SocialProfileJsonLd } from 'next-seo'
@@ -17,6 +15,7 @@ import siteConfig from '~/site-config'
 import Fonts from '../font/Font'
 
 import type { AppProps } from '@/types/next'
+import '@/stylesheets/html.css'
 
 const MobileDrawer = dynamic(() => import('@/components/mobile-drawer').then(C => C.MobileDrawer))
 
