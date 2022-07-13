@@ -20,9 +20,7 @@ const SocialImagePage: NextPage<SocialImageParams> = ({ title, description, path
             <Heading size={title.length > 40 ? 'lg' : 'xl'}>{title}</Heading>
           </Box>
 
-          <Box fontSize="lg">
-            <Markdown renderers={baseRenderer} source={description} />
-          </Box>
+          <Box fontSize="lg">{/* <Markdown renderers={baseRenderer} source={description} /> */}</Box>
 
           <Box py={4}>
             <Divider />
